@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define IN_PATH_1   "./data/parallel.txt"
-#define IN_PATH_2   "./data/serial.txt"
+#define IN_1   "./data/parallel.txt"
+#define IN_2   "./data/serial.txt"
 
 #define PRECISION 0.00001
 
@@ -50,8 +50,8 @@ int checkFiles(const int N, const int D){
 
   // open files
   FILE * fp1, * fp2;
-  HANDLE_NULL( (fp1 = fopen (IN_PATH_1, "r")) );
-  HANDLE_NULL( (fp2 = fopen (IN_PATH_2, "r")) );
+  HANDLE_NULL( (fp1 = fopen (IN_1, "r")) );
+  HANDLE_NULL( (fp2 = fopen (IN_2, "r")) );
 
   // check elemets
   for (i=0; i<N; i++) 
